@@ -7,6 +7,7 @@ on:
 
 jobs:
   publish:
+    name: Publish to npm
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -17,5 +18,10 @@ jobs:
         with:
           node-version: lts/*
           cache: npm
-      - run: npm install
-      - run: npm run release
+      - run: npm ci
+      - name: Release
+        run: |
+          [ -n "$NPM_TOKEN" ] && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
+          npm run release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

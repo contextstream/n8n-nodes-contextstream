@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-contextstream",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Official n8n community node for ContextStream hosted MCP — persistent memory, search, and session tools for n8n AI Agent workflows.",
 	"license": "MIT",
 	"homepage": "https://contextstream.io",
@@ -19,10 +19,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/contextstream/n8n-nodes-contextstream.git"
+		"url": "git+https://github.com/contextstream/n8n-nodes-contextstream.git"
 	},
 	"bugs": {
 		"url": "https://github.com/contextstream/n8n-nodes-contextstream/issues"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"scripts": {
 		"build": "n8n-node build",

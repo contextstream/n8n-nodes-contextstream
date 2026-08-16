@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-contextstream",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Official n8n community node for ContextStream hosted MCP — persistent memory, search, and session tools for n8n AI Agent workflows.",
 	"license": "MIT",
 	"homepage": "https://contextstream.io",

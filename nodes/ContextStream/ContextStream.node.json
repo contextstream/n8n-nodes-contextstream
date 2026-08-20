@@ -2,7 +2,7 @@
 	"node": "n8n-nodes-contextstream.contextStream",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": ["Development", "Developer Tools", "AI"],
+	"categories": ["Development"],
 	"resources": {
 		"credentialDocumentation": [
 			{ "url": "https://github.com/contextstream/n8n-nodes-contextstream#credentials" }

@@ -8,14 +8,11 @@ Docs: https://github.com/contextstream/mcp-server
 Privacy: https://contextstream.io/privacy
 Contact: erik@contextstream.io
 
-
 This package is MIT-licensed and has no runtime dependencies.
-It is not on the public registry yet.
 
 ## Install
 
-In n8n: Settings, Community Nodes, Install n8n-nodes-contextstream.
-Until publish, install from this GitHub repository.
+In n8n: Settings → Community Nodes → Install `n8n-nodes-contextstream`.
 
 ## Credentials
 
@@ -32,6 +29,29 @@ Memory: Search (search), Create Document (memory_create_doc).
 Session: Capture Lesson (session_capture_lesson), Capture Plan (capture_plan),
 Call Session (session action such as list_recaps), Help Version (help action version).
 Use Call Tool plus JSON arguments for other documented tools.
+
+## Example: Memory › Search
+
+1. Add a ContextStream node.
+2. Resource: Memory. Operation: Search.
+3. Query: `where do we handle authentication`
+4. Leave Tool Arguments as `{}` unless you need extra MCP fields (for example `workspace_id`).
+
+Example output (shape only; hits depend on what is indexed in your workspace):
+
+```json
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Found matches for \"where do we handle authentication\"."
+    }
+  ],
+  "isError": false
+}
+```
+
+If the MCP tool returns structured results, they appear on the same item under `json`.
 
 ## Development
 
